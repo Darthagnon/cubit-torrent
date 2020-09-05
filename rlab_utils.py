@@ -1,6 +1,6 @@
 import json
 import re  # nosec
-import ipywidgets as widgets  # pylint: disable=import-error
+import ipywidgets  # pylint: disable=import-error
 from IPython.display import HTML, clear_output, display  # pylint: disable=import-error
 from google.colab import files  # pylint: disable=import-error
 from glob import glob
@@ -9,10 +9,10 @@ from sys import exit as exx
 
 # JDownloader =================================================================
 
-Email = widgets.Text(placeholder="*Required", description="Email:")
-Password = widgets.Text(placeholder="*Required", description="Password:")
-Device = widgets.Text(placeholder="Optional", description="Name:")
-SavePath = widgets.Dropdown(
+Email = ipywidgets.Text(placeholder="*Required", description="Email:")
+Password = ipywidgets.Text(placeholder="*Required", description="Password:")
+Device = ipywidgets.Text(placeholder="Optional", description="Name:")
+SavePath = ipywidgets.Dropdown(
     value="/content/Downloads",
     options=["/content", "/content/Downloads"],
     description="Save Path:",
